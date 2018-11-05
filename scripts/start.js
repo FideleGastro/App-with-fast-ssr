@@ -6,8 +6,12 @@ import webpackDevMiddleware from 'webpack-dev-middleware' // eslint-disable-line
 import webpackHotMiddleware from 'webpack-hot-middleware' // eslint-disable-line
 import fastify from 'fastify'
 
+
 import cacheClean from './lib/cacheClean'
 import webpackConfig from '../config/webpack.config'
+
+
+const PORT = process.env.PORT || 5000
 
 const server = fastify({
   logger: {
@@ -33,7 +37,7 @@ server.register(async (...rest) => {
 
 const start = async () => {
   try {
-    await server.listen(4000)
+    await server.listen(PORT)
   } catch (err) {
     server.log.error(err)
     process.exit(1)
