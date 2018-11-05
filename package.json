@@ -55,6 +55,7 @@
     "react-dom": "^16.5.2",
     "redis": "^2.8.0",
     "styled-components": "^4.0.2",
-    "webpack": "^4.22.0"
+    "webpack": "^4.22.0",
+    "nodemon": "^1.18.5"
   }
 }
